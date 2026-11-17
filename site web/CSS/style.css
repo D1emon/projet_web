@@ -1,0 +1,25 @@
+header {
+    background-color: #A5A6F6;}
+h1{
+    padding-left: 23em;
+    padding-bottom: 2em;
+}
+button{
+    border: 0em;
+    background-color: #A5A6F6;
+    padding-left: 10em;
+}
+.logo{
+    size: 20em;
+}
+footer {
+    background-color: #A5A6F6;
+}
+body {
+    background-image: url("../pages/media/fond accueilweb2.png");
+    background-size: auto ;
+    
+}
+.reco,.dest,.services,.acti{
+    margin-right: 18em;
+}
