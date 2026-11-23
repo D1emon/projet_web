@@ -1,3 +1,5 @@
+/* Style commun  a tous le site */
+
 header {
     background-color: #A5A6F6;
     border-top-left-radius:2em;
@@ -69,4 +71,12 @@ section{
     display: flex;
     justify-content: space-between;
 
+}
+header {
+    background-color: #A5A6F6;}
+footer {
+    background-color: #A5A6F6;
+}
+body {
+    
 }

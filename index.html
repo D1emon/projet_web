@@ -3,12 +3,13 @@
 <html lang="fr">    
     <head>        
         <title>America travels</title>        
-        <meta charset="utf-8">    
-        <link rel="stylesheet" href="./CSS/style.css">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/light.css">
+        <link rel="stylesheet" href="/css/global.css">
+        <link rel="stylesheet" href="/css/index.css">
     </head>    
          <body> 
-           
-
+        
                 <header>
                         <nav class= "crumb"> 
                             <ol>
@@ -34,45 +35,23 @@
                                     </p>
                                 </form>
                         <button commandfor="mydialog" command="request-close">fermez</button>
-                        <script> <!-- lignes venant de la documentation mdn mais adaptées pour notre site-->
-                            const dialog = document.querySelector("dialog");
-                            const radio = document.querySelector("form").elements["close"];
-                            const warning = document.querySelector(".warning");
-
-                            dialog.addEventListener("cancel", (e) => {
-                            if (!e.cancelable) return;
-                            if (radio.value === "no") {
-                                 warning.hidden = false;
-                            e.preventDefault();
-                            } 
-                            else {
-                            warning.hidden = true;
-                                 }
-                                });
-                        </script>
-                    
                 </div>
 
 
                 </header>       
                 <section>
                    <div id="boite">
-                         <button class="bouton" type="button" onclick="myfunction()">recommandations</button>
-                            <script><!--mecanisme trouver sur le reddit: https://www.reddit.com/r/HTML/comments/1cxggtg/how_to_make_a_button_that_redirect_to_another/?tl=fr -->
-                                function myfunction(){
-                                    window.location.href = "./pages/pagerecomandation.html" ;
-                                }
-                            </script>    
-                        <button class="bouton" type="button">destinations</button>
-                        <button class="bouton" type="button">services</button>
-                        <button class="bouton" type="button">activitées</button>
+                         <a class="bouton" href="/pages/recomandation.html">recommandations</a>  
+                        <a class="bouton" type="button">destinations</a>
+                        <a class="bouton" type="button">services</a>
+                        <a class="bouton" type="button">activitées</a>
                     </div>
                     <article>
                         <header>
                             <h2>à la Une</h2>
                         </header>
-                        <button class="bouton" type="button"> precedent </button>
-                        <button class="bouton" type="button">suivant</button>
+                        <a class="bouton" type="button"> precedent </a>
+                        <a class="bouton" type="button">suivant</a>
                     </article>
 
                 </section>
@@ -81,6 +60,7 @@
                     <p>413 Av. Gaston Berger, 13100 Aix-en-Provence</p>
                 </article>
             </footer>
-        </nav> 
+        </nav>
+        <script src="/js/index.js" defer></script>
     </body>
     </html>
