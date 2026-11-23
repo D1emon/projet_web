@@ -7,18 +7,73 @@
         <link rel="stylesheet" href="./CSS/style.css">
     </head>    
          <body> 
-            <nav> 
+           
+
                 <header>
-                    <img class ="logo" src="./pages/media/logo2.png" alt="logo"></img>                    
-                    <h1> america travels</h1>
-                    <button class="contact">nous contatcter</button>
+                        <nav class= "crumb"> 
+                            <ol>
+                            <li class="crumb"><a href="#">accueil</a></li>
+                            </ol>
+                        </nav>
+                    <div id="entete">
+                    <img class ="logo" src="./media/logo2.png" alt="logo"></img>                    
+                    <h1> <strong>America Travels</strong></h1>
+                    <button class="bouton" type="button"  commandfor="mydialog" command="show-modal">nous contatcter</button>
+                    <button class="bouton" type="button">Nos agences</button>
+                     <dialog id="mydialog"> 
+                            <div class="wrapper">
+                                <form >
+                                    <p>
+                                     <label for="prenom">Prénom</label>
+                                     <input id="prenom" type="text" name="prenom" value=" ">
+                                     <label for="nom">Nom</label>
+                                     <input id="nom" type="text" name="nom" value=" ">
+                                     <br>
+                                     <textarea name="impression" rows="2" cols="50">Donnez vos impressions sur le site...</textarea><br>
+                                     <input type="submit" value="envoyez">
+                                    </p>
+                                </form>
+                        <button commandfor="mydialog" command="request-close">fermez</button>
+                        <script> <!-- lignes venant de la documentation mdn mais adaptées pour notre site-->
+                            const dialog = document.querySelector("dialog");
+                            const radio = document.querySelector("form").elements["close"];
+                            const warning = document.querySelector(".warning");
+
+                            dialog.addEventListener("cancel", (e) => {
+                            if (!e.cancelable) return;
+                            if (radio.value === "no") {
+                                 warning.hidden = false;
+                            e.preventDefault();
+                            } 
+                            else {
+                            warning.hidden = true;
+                                 }
+                                });
+                        </script>
+                    
+                </div>
+
 
                 </header>       
                 <section>
-                    <button class="reco">recommandations</button>
-                    <button class="dest">destinations</button>
-                    <button class="services">services</button>
-                    <button class="acti">activitées</button>
+                   <div id="boite">
+                         <button class="bouton" type="button" onclick="myfunction()">recommandations</button>
+                            <script><!--mecanisme trouver sur le reddit: https://www.reddit.com/r/HTML/comments/1cxggtg/how_to_make_a_button_that_redirect_to_another/?tl=fr -->
+                                function myfunction(){
+                                    window.location.href = "./pages/pagerecomandation.html" ;
+                                }
+                            </script>    
+                        <button class="bouton" type="button">destinations</button>
+                        <button class="bouton" type="button">services</button>
+                        <button class="bouton" type="button">activitées</button>
+                    </div>
+                    <article>
+                        <header>
+                            <h2>à la Une</h2>
+                        </header>
+                        <button class="bouton" type="button"> precedent </button>
+                        <button class="bouton" type="button">suivant</button>
+                    </article>
 
                 </section>
             <footer>

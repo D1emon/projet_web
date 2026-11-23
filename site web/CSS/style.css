@@ -1,25 +1,72 @@
 header {
-    background-color: #A5A6F6;}
-h1{
-    padding-left: 23em;
-    padding-bottom: 2em;
-}
-button{
-    border: 0em;
     background-color: #A5A6F6;
-    padding-left: 10em;
+    border-top-left-radius:2em;
+    border-top-right-radius: 2em;
 }
-.logo{
-    size: 20em;
+h1{
+    padding-left:13em;
+}
+nav {
+  border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.crumb {
+  display: inline-block;
+}
+
+.crumb a::after {
+  display: inline-block;
+  color: black;
+  content: ">";
+  font-size: 80%;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.bouton{
+    background-color: #A5A6F6;
+    border-radius:2em;
+
+}
+.bouton_de_navigation{
+    background-color: #A5A6F6;
+    border-radius:2em;
+
+}
+.bouton_contact{
+    padding-left: 12em;
 }
 footer {
     background-color: #A5A6F6;
+    border-bottom-left-radius:2em;
+    border-bottom-right-radius: 2em;
 }
 body {
-    background-image: url("../pages/media/fond accueilweb2.png");
+    background-image: url("../media/fond accueilweb2.png");
     background-size: auto ;
     
 }
-.reco,.dest,.services,.acti{
-    margin-right: 18em;
+   
+article{
+    background-color: #A5A6F6;
+
+}
+section{
+    align-items: center;
+}
+#boite{
+    display:flex;
+    justify-content: space-between;
+    justify-content: space-around;
+    
+}
+#entete{
+    display: flex;
+    justify-content: space-between;
+
 }
