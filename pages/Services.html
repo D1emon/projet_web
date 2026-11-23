@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Services - America Travels</title>
     <link rel="stylesheet" href="/css/services.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/light.css">
 </head>
 <body>
 
@@ -33,22 +35,7 @@
                                     </p>
                                 </form>
                         <button commandfor="mydialog" command="request-close">fermez</button>
-                        <script> <!-- lignes venant de la documentation mdn mais adaptées pour notre site-->
-                            const dialog = document.querySelector("dialog");
-                            const radio = document.querySelector("form").elements["close"];
-                            const warning = document.querySelector(".warning");
-
-                            dialog.addEventListener("cancel", (e) => {
-                            if (!e.cancelable) return;
-                            if (radio.value === "no") {
-                                 warning.hidden = false;
-                            e.preventDefault();
-                            } 
-                            else {
-                            warning.hidden = true;
-                                 }
-                                });
-                        </script>
+                        <script> src="/js/index.js"</script>
                     
                 </div>
 
