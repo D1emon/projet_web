@@ -1,1 +1,21 @@
 /* Definition des couleurs theme claire */
+header {
+    background-color: #A5A6F6;
+    border-top-left-radius:2em;
+    border-top-right-radius: 2em;
+}
+footer {
+    background-color: #A5A6F6;
+    border-bottom-left-radius:2em;
+    border-bottom-right-radius: 2em;
+}
+.bouton{
+    background-color: #A5A6F6;
+}
+.bouton_de_navigation{
+    background-color: #A5A6F6;}
+
+article{
+    background-color: #A5A6F6;
+
+}
