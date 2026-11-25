@@ -41,11 +41,11 @@ dialog.addEventListener("cancel", (e) => {
 
  document.addEventListener("keydown",(event) => { // attention document n'est pas bon apres le if puisque il represent n importe quelle page web mais ne la charge pas 
         if (event.key==="F1"  ){ // attention il faut trois egale et non pas deux comment en cpp
-        window.location.href = "./pages/recomandation.html";
+        window.location.href = "../pages/recomandation.html";
         }else if (event.key==="F2"){
-            window.location.href= "./pages/destinations.html";       
+            window.location.href= "../pages/destinations.html";       
          }else if (event.key==="F3"){
-            window.location.href= "./pages/destinations.html";       
+            window.location.href= "../pages/Services.html";       
          }
 
     });// a la paranthese fermante 
