@@ -20,8 +20,6 @@
 }
 a {
     text-decoration: none;
-}
-a{
     align-items: center;
     
 }
@@ -33,6 +31,25 @@ a{
     justify-content: space-between;
     justify-content: space-around;
     size: 2em;
+}
+img{
+    transition:transform .4s;
+    transition: background-image .1s;
+    border-radius: 2em;
+}
+img:hover{
+    cursor: pointer;
+    transform:scale(1.07) ; /* lien pour faire le zoom https://wawasensei.dev/tuto/tuto-html-css-liste-article-de-blog-zoom-au-survol*/
+}
+#meme{
+    transition: 2s;
+    height: auto;
+
+}
+
+#meme:hover{
+    cursor: pointer;
+    content: url("../media/meme.jpg");
 }
 #boite{
     display:flex;
@@ -46,6 +63,7 @@ a{
     justify-content: space-between;
     justify-content: space-around;
     margin-top: 1em;
+    padding-bottom: 1em;
     
 }
 #entete{
@@ -57,9 +75,6 @@ article{
     margin-top: 2em;
     padding-left: 2em;
     border-radius: 1em;
-}
-img{
-    border-radius: 2em;
 }
 /* 1. Styles par défaut : Mobile */
 .grille {
@@ -80,7 +95,4 @@ img{
   .grille {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-img {
-  max-width: 50%;
 }
