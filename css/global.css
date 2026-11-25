@@ -46,8 +46,13 @@ a:hover{
 }
 
 body {
+<<<<<<< HEAD
+    background-image: url("https://github.com/D1emon/projet_web/blob/main/site%20web/media/fond%20accueilweb2.png?raw=true");
+    background-size: auto ;
+=======
     background-image: url("/media/fondpc.png");
     background-size: cover ;
+>>>>>>> f6b70e7b66bb99f25ca68545a17b4d097b656f09
     
 }
    

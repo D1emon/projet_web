@@ -3,84 +3,105 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Billets d'avion, hébergement, location de voiture et voyages sur mesure : découvrez les services d'America Travels.">
     <title>Services - America Travels</title>
-    <link rel="stylesheet" href="/css/services.css">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/light.css">
+    <link rel="stylesheet" href="../css/light.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/services.css">
 </head>
 <body>
-
-     <header>
-                        <nav class= "crumb"> 
-                            <ol>
-                            <li class="crumb"><a href="#">accueil</a></li>
-                            </ol>
-                        </nav>
-                    <div id="entete">
-                    <img class ="logo" src="https://github.com/D1emon/projet_web/blob/main/site%20web/media/logo2.png?raw=true" alt="logo"></img>                    
-                    <h1> <strong>America Travels</strong></h1>
-                    <button class="bouton" type="button"  commandfor="mydialog" command="show-modal">nous contatcter</button>
-                    <button class="bouton" type="button">Nos agences</button>
-                     <dialog id="mydialog"> 
-                            <div class="wrapper">
-                                <form >
-                                    <p>
-                                     <label for="prenom">Prénom</label>
-                                     <input id="prenom" type="text" name="prenom" value=" ">
-                                     <label for="nom">Nom</label>
-                                     <input id="nom" type="text" name="nom" value=" ">
-                                     <br>
-                                     <textarea name="impression" rows="2" cols="50">dites...</textarea><br>
-                                     <input type="submit" value="envoyez">
-                                    </p>
-                                </form>
-                        <button commandfor="mydialog" command="request-close">fermez</button>
-                        <script> src="/js/index.js"</script>
-                    
+ 
+    <header>
+        <nav class="crumbs" aria-label="Fil d'Ariane">
+            <ol>
+                <li class="crumb"><a href="../index.html">accueil</a></li>
+                <li class="crumb"><a href="#">services</a></li>
+            </ol>
+        </nav>
+ 
+        <div id="entete">
+            <a href="../index.html"><img class="logo" src="../media/logo2.png" alt="Logo America Travels"></a>
+            <h1><strong>America Travels</strong></h1>
+            <button class="bouton" type="button" commandfor="mydialog" command="show-modal">Nous contacter</button>
+            <a class="bouton" href="#agences">Nos agences</a>
+ 
+            <dialog id="mydialog">
+                <div class="wrapper">
+                    <form method="dialog">
+                        <p>
+                            <label for="prenom">Prénom</label>
+                            <input id="prenom" type="text" name="prenom">
+                            <label for="nom">Nom</label>
+                            <input id="nom" type="text" name="nom">
+                            <br>
+                            <textarea name="impression" rows="2" cols="50" placeholder="Dites-nous..."></textarea><br>
+                            <input type="submit" value="Envoyer">
+                        </p>
+                    </form>
                 </div>
-
-
-                </header>  
-
-   
+                <button type="button" commandfor="mydialog" command="request-close">Fermer</button>
+            </dialog>
+        </div>
+    </header>
+ 
     <main>
-        <h2 class="titre-page">Nos services</h2>
-
+        <section class="hero">
+            <h2 class="titre-page">Nos services</h2>
+            <p class="intro">
+                De la réservation de votre vol à la dernière nuit d'hôtel, nous préparons
+                votre voyage en Amérique. Consultez aussi nos
+                <a href="recomandation.html">recommandations</a> et nos
+                <a href="destinations.html">destinations</a>.
+            </p>
+            <emoji class="avion" aria-hidden="true">✈️</emoji>
+        </section>
+ 
         <section class="liste-services">
-
             <article class="service">
+                <emoji class="icone" aria-hidden="true">✈️</emoji>
                 <h3>Billets d'avion</h3>
-                <p> nous vous aidons a reserver vos billet d'avoins avec des pormotion imbattable</p>
+                <p>Nous vous aidons à réserver vos billets d'avion avec des promotions imbattables.</p>
+                <a class="lien" href="../pages/destinations.html">Voir les destinations →</a>
             </article>
-
+ 
             <article class="service">
+                <emoji class="icone" aria-hidden="true">🏨</emoji>
                 <h3>Hébergement</h3>
                 <p>Hôtels, motels et locations : nous réservons les logements adaptés à votre budget et à votre itinéraire.</p>
+                <a class="lien" href="../pages/recomandation.html">Nos recommandations →</a>
             </article>
-
+ 
             <article class="service">
+                <emoji class="icone" aria-hidden="true">🚗</emoji>
                 <h3>Location de voiture</h3>
                 <p>Un road trip à travers le pays ? Nous réservons votre véhicule et vous expliquons les règles de conduite locales.</p>
+                <a class="lien" href="https://travel.state.gov" target="_blank" rel="noopener">Règles de conduite →</a>
             </article>
-
+ 
             <article class="service">
+                <emoji class="icone" aria-hidden="true">🗺️</emoji>
                 <h3>Voyage sur mesure</h3>
                 <p>Dites-nous vos envies : nous construisons un programme personnalisé, jour par jour.</p>
+                <a class="lien" href="#inspirations">Voir des idées →</a>
             </article>
-
+ 
             <article class="service">
+                <emoji class="icone" aria-hidden="true">📄</emoji>
                 <h3>Aide administrative</h3>
                 <p>Formulaire ESTA, assurance voyage, conseils sur les papiers à prévoir avant le départ.</p>
+                <a class="lien" href="https://esta.cbp.dhs.gov" target="_blank" rel="noopener">Site officiel ESTA →</a>
             </article>
-
         </section>
-    </main>
 
-    <footer>
+    </main>
+ 
+    <footer id="agences">
         <article>
-            <p>413 Av. Gaston Berger, 13100 Aix-en-Provence</p>
+            <p><a href="https://iut.univ-amu.fr/fr/formations/bachelor-universitaire-de-technologie/but-informatique/but-info-aix" target="_blank" rel="noopener">413 Av. Gaston Berger, 13100 Aix-en-Provence</a></p>
         </article>
     </footer>
-
+ 
+    <script src="../js/services.js" defer></script>
 </body>
 </html>
+ 
