@@ -1,7 +1,7 @@
 const dialog = document.querySelector("dialog");
 const radio = document.querySelector("form").elements["close"];
 const warning = document.querySelector(".warning");
-const images = ["/media/springfield.png","/media/santiago.png"]
+const images = ["media/springfield.png","media/santiago.png"]
 
 
 let index = 0;
