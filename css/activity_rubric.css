@@ -38,6 +38,7 @@ body{
     height: 5em;
     width: 20em;
     color: darkorchid;
+    justify-content:center;
     
 }
 .activity3{
@@ -68,8 +69,8 @@ body{
  margin-bottom: 0.5em;
  color: darkorchid;
  border: solid;
- width: 20em;
- height: 5em;
+ width: 10em;
+ height: 3em;
  margin:auto;
  border-radius: 30px;
  

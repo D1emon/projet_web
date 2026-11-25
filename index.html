@@ -2,65 +2,74 @@
 <!DOCTYPE html>
 <html lang="fr">    
     <head>        
-        <title>America travels</title>        
+        <title>America travels</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!--donner par l ia pour pouvoir afficher le site en mobile et non bureau -->
+        <meta name="description" content="Vous voulez vous evader nous vous proposerons des choix diverses et varies dans le continent americain.  .">       
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/css/light.css">
+        <link rel="stylesheet" href="/css/dark.css">
         <link rel="stylesheet" href="/css/global.css">
         <link rel="stylesheet" href="/css/index.css">
+
     </head>    
-         <body> 
-        
-                <header>
-                        <nav class= "crumb"> 
-                            <ol>
-                            <li class="crumb"><a href="#">accueil</a></li>
-                            </ol>
-                        </nav>
+        <body> 
+            <header>
+                    <nav class= "crumb"> 
+                        <ol>
+                        <li class="crumb"><a href="#">accueil</a></li><!-- ligne https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav-->
+                        </ol>
+                    </nav>
                     <div id="entete">
-                    <img class ="logo" src="./media/logo2.png" alt="logo"></img>                    
-                    <h1> <strong>America Travels</strong></h1>
-                    <button class="bouton" type="button"  commandfor="mydialog" command="show-modal">nous contatcter</button>
-                    <button class="bouton" type="button">Nos agences</button>
-                     <dialog id="mydialog"> 
+                        <img class ="logo" src="/media/logo2.png" alt="logo"/>                    
+                        <h1> <strong>America Travels</strong></h1>
+                        <button class="bouton" type="button"  commandfor="mydialog" command="show-modal">nous contatcter</button>
+                        <button class="bouton" type="button">Nos agences</button>
+                        <dialog id="mydialog"> 
                             <div class="wrapper">
                                 <form >
                                     <p>
-                                     <label for="prenom">Prénom</label>
+                                    <label for="prenom">Prénom</label>
                                      <input id="prenom" type="text" name="prenom" value=" ">
                                      <label for="nom">Nom</label>
                                      <input id="nom" type="text" name="nom" value=" ">
+                                     <label for="email">email</label>
+                                     <input id ="email" type="email" name ="email" value>
                                      <br>
                                      <textarea name="impression" rows="2" cols="50">Donnez vos impressions sur le site...</textarea><br>
                                      <input type="submit" value="envoyez">
                                     </p>
                                 </form>
-                        <button commandfor="mydialog" command="request-close">fermez</button>
-                </div>
+                            </div>
+                            <button commandfor="mydialog" command="request-close">fermez</button>
+                        </dialog>   
+                                
+                    </div>       
 
 
                 </header>       
                 <section>
                    <div id="boite">
                          <a class="bouton" href="/pages/recomandation.html">recommandations</a>  
-                        <a class="bouton" type="button">destinations</a>
-                        <a class="bouton" type="button">services</a>
-                        <a class="bouton" type="button">activitées</a>
+                        <a class="bouton" href="/pages/destinations.html">destinations</a>
+                        <a class="bouton" href="">services</a>
+                        <a class="bouton" href="">activitées</a>
                     </div>
                     <article>
                         <header>
                             <h2>à la Une</h2>
                         </header>
-                        <a class="bouton" type="button"> precedent </a>
-                        <a class="bouton" type="button">suivant</a>
+                        <div id="navigation">
+                         <a href="#" id="prev" > precedent </a>
+                         <img id="imagecoulissante" src="/media/springfield.png" alt="image springfield" />
+                         <a href="#"  id="next">suivant</a>
+                        </div>
                     </article>
 
                 </section>
             <footer>
                 <article>
-                    <p>413 Av. Gaston Berger, 13100 Aix-en-Provence</p>
+                    <a href ="https://iut.univ-amu.fr/fr/formations/bachelor-universitaire-de-technologie/but-informatique/but-info-aix">413 Av. Gaston Berger, 13100 Aix-en-Provence</a>
                 </article>
             </footer>
-        </nav>
-        <script src="/js/index.js" defer></script>
-    </body>
+            <script src="/js/index.js" defer></script>
+        </body>
     </html>
