@@ -1,5 +1,5 @@
 /* Theme sombre : les !important evitent les conflits avec les CSS des pages */
-header, footer, .bouton, article {
+header, footer, .bouton, article, .activities, .button_search {
     background-color: #5e60f8 !important;
 }
 
