@@ -16,13 +16,12 @@ dialog.addEventListener("cancel", (e) => {
     }
 });
 
-// lignes venant de la doc et en regardant le site de M Nevot venant  mdn liens utilises:https://developer.mozilla.org/fr/docs/Web/API/Document et https://developer.mozilla.org/fr/docs/Web/API/KeyboardEvent
-
- document.addEventListener("keydown",(event) => { // attention document n'est pas bon apres le if puisque il represent n importe quelle page web mais ne la charge pas 
-        if (event.key==="Backspace" ){ // attention il faut trois egale et non pas deux comment en cpp
-        window.location.href = "/index.html";
-        } else if (event.key==="F2"){
-            window.location.href= "/pages/destinations.html";       
-         } 
-
-    });// a la paranthese fermante 
+// Raccourcis clavier
+document.addEventListener("keydown", (event) => {
+    if (event.target.closest("input, textarea")) return;
+    if (event.key === "Backspace") {
+        window.location.href = "../index.html";
+    } else if (event.key === "F2") {
+        window.location.href = "destinations.html";
+    }
+});
