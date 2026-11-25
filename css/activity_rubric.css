@@ -118,6 +118,9 @@ body{
     margin-top: 2em;
     border-radius: 30px;
     background-color: #80fdfd;
+    justify-content: space-around;
+    margin-left: 1em;
+    margin-right: 1em;
    
 }
 .statue_liberty{
@@ -134,3 +137,14 @@ body{
    
 
 }
+.all_activities{
+    width: 90em;
+    margin: auto;
+
+}
+
+.dark{
+    justify-content: end;
+    width: 10em;
+}
+
