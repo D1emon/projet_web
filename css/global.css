@@ -1,5 +1,28 @@
 /* Style commun  a tous le site */
+/* Seulement sur grands écrans */
+@media (min-width: 768px) {
+  #boite { display: flex; }
+}
+/* 1. Styles par défaut : Mobile */
+.grille {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
 
+/* 2. Tablette et plus large */
+@media (min-width: 768px) {
+  .grille {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3. Ordinateur (Desktop) */
+@media (min-width: 1024px) {
+  .grille {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
 h1{
     padding-left:13em;
@@ -63,10 +86,7 @@ section{
 
 #boite { display: grid; }
 
-/* Seulement sur grands écrans */
-@media (min-width: 768px) {
-  #boite { display: flex; }
-}
+
 a {
     text-decoration: none;
 }

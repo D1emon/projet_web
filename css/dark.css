@@ -22,5 +22,11 @@ article{
 }
 a{
     color:#000000;
-
+/* Seulement sur grands écrans */
+@media (min-width: 768px) {
+  #boite { display: flex; }
+}
+a {
+    text-decoration: none;
+}
 }
