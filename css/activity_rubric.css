@@ -86,18 +86,51 @@ body{
     height: 5em;
     border-radius: 30px;
     border-color:darkorchid;
-    border: solid;
+    width: 90em;
+    display: flex;
+    margin: auto;
 
 }
 .Etat{
     height: 6em;
-    width: 12em;
+    width: 40em;
     border-radius: 30px;
 }
 .search_icon1{
     
-    width: 2.5em;
+    width: 3em;
+    height: 3em;
     border-radius: 30px;
+   
+    
     
 }
+.comeback{
+    border-radius: 30px;
+    background-color: crimson;
+    font-family: cursive;
+    width: 8em;
+    font-size: 20px;
+}
+.activities{
+    height: 15em;
+    width: 40em;
+    margin-top: 2em;
+    border-radius: 30px;
+    background-color: #80fdfd;
+   
+}
+.statue_liberty{
+    background-image: url(/projet_web-main/media/statue.jpg);
+    height: 20em;
+    width: 40em;
+}
+.button_search{
+    display: inline-block;
+    height: 6em;
+    width: 6em;
+    border-radius: 30px;
+    background-color: #B9FFFF;
+   
 
+}
