@@ -1,32 +1,23 @@
-/* Definition des couleurs theme sombre */
-/* Definition des couleurs theme claire */
-header {
-    background-color: #5e60f8;
-    border-top-left-radius:2em;
-    border-top-right-radius: 2em;
+/* Theme sombre : les !important evitent les conflits avec les CSS des pages */
+header, footer, .bouton, article {
+    background-color: #5e60f8 !important;
 }
-footer {
-    background-color: #5e60f8;
-    border-bottom-left-radius:2em;
-    border-bottom-right-radius: 2em;
-}
-.bouton{
-    background-color: #5e60f8;
-}
-.bouton_de_navigation{
-    background-color: #5e60f8;}
 
-article{
-    background-color: #5e60f8;
+/* Cartes et listes : fond sombre + texte clair */
+body .service,
+body .carte,
+body .texte,
+body .conseils ul {
+    background-color: #2b2b4a !important;
+    color: #ffffff !important;
+}
+body .service h3, body .service p,
+body .carte h3, body .carte p,
+body .conseils li, body .conseils strong {
+    color: #ffffff !important;
+}
 
-}
-a{
-    color:#000000;
-/* Seulement sur grands écrans */
-@media (min-width: 768px) {
-  #boite { display: flex; }
-}
-a {
-    text-decoration: none;
-}
-}
+/* Liens et petits textes */
+body .lien, body .conseils li a { color: #ffe3a3 !important; }
+body .tags { color: #b9baff !important; }
+a { color: #000000; }
