@@ -121,8 +121,12 @@ body{
     justify-content: space-around;
     margin-left: 1em;
     margin-right: 1em;
+    
+   
+    
    
 }
+
 .statue_liberty{
     background-image: url(/projet_web-main/media/statue.jpg);
     height: 20em;
@@ -140,11 +144,16 @@ body{
 .all_activities{
     width: 90em;
     margin: auto;
+    
 
 }
 
 .dark{
     justify-content: end;
     width: 10em;
+}
+.activities::hover
+{
+    color: aliceblue;
 }
 
