@@ -1,90 +1,168 @@
-
 body {
     margin: 0;
-    background-image: url("https://github.com/D1emon/projet_web/blob/main/site%20web/media/fond%20accueilweb2.png?raw=true"); 
+    background-image: url("../media/fondpc.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    font-family: "Segoe UI", system-ui, sans-serif;
 }
 
-
+/* ---------- En-tête ---------- */
 header {
     background-color: #A5A6F6;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
+    flex-direction: column;
+    padding: 0.5rem 2rem 1rem;
+    animation: descend 0.8s ease both;
 }
-li {
-    border: 0;
-    background-color: #A5A6F6;
-    padding: 0.8rem 1.6rem;  
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 6px;
-}
-.logo {
-    width: 90px;
-    height: auto;
-}
+#entete { display: flex; align-items: center; gap: 1rem; }
+.crumbs ol { margin: 0.3rem 0; }
+.crumb a::after { content: none; }
+.crumb:not(:last-child) a::after { content: " >"; }
+
+.logo { width: 90px; height: auto; transition: transform 0.4s; }
+.logo:hover { transform: rotate(-6deg) scale(1.08); }
 
 h1 {
     margin: 0;
     flex: 1;
-    text-align: center;      
+    padding-left: 0;
+    text-align: center;
     text-transform: capitalize;
 }
 
-button {
+.bouton {
     border: 0;
-    background-color: #A5A6F6;
-    padding: 0.8rem 1.6rem;  
+    padding: 0.8rem 1.6rem;
     font-size: 1rem;
-    cursor: pointer;
-    border-radius: 6px;
+    color: #000;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
-
-button:hover {
+.bouton:hover {
     background-color: #8c8de8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem 2rem 3rem;
-}
+dialog { border: 0; border-radius: 1em; padding: 1.5rem; animation: apparait 0.3s ease; }
+dialog::backdrop { background: rgba(20, 20, 60, 0.55); }
 
+/* ---------- Contenu ---------- */
+main { max-width: 1100px; margin: 0 auto; padding: 1rem 2rem 3rem; }
+
+.hero { position: relative; text-align: center; overflow: hidden; padding: 1rem 0 2rem; }
 .titre-page {
-    text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    animation: monte 0.9s ease both;
 }
-
 .intro {
-    text-align: center;
     max-width: 60ch;
-    margin: 0 auto 2rem;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+    animation: monte 0.9s 0.2s ease both;
+}
+.intro a { color: #ffe3a3; text-decoration: underline; }
+.intro a:hover { background: none; color: #fff; }
+
+/* Avion qui traverse la page */
+.avion {
+    position: absolute;
+    top: 0.5rem;
+    left: -3rem;
+    font-size: 2rem;
+    animation: vol 9s linear infinite;
 }
 
+/* ---------- Cartes de services ---------- */
 .liste-services {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
-
 .service {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.85);
     border-left: 6px solid #A5A6F6;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 1.2rem 1.5rem;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s, transform 0.7s, box-shadow 0.3s, border-color 0.3s;
+}
+.service.visible { opacity: 1; transform: none; }
+.service.visible:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.3);
+    border-color: #5e60f8;
+}
+.icone { display: inline-block; font-size: 2.2rem; transition: transform 0.4s; }
+.service:hover .icone { transform: scale(1.3) rotate(-10deg); }
+.service h3 { margin: 0.4rem 0; }
+
+.lien {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #3a3cc4;
+    background: none;
+    transition: transform 0.2s;
+}
+.lien:hover { background: none; transform: translateX(6px); text-decoration: underline; }
+
+/* ---------- Galerie (2 images) ---------- */
+.inspirations { margin-top: 3rem; }
+.galerie { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 1rem; }
+.photo {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 16px;
+    aspect-ratio: 16 / 9;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s, transform 0.7s, box-shadow 0.3s;
+}
+.photo.visible { opacity: 1; transform: none; }
+.photo:hover { background: none; box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4); }
+.photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.photo:hover img { transform: scale(1.1); }
+.photo span {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 1.5rem 1rem 0.8rem;
+    color: #fff;
+    font-weight: bold;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
 }
 
-footer {
-    background-color: #A5A6F6;
-    text-align: center;
-    padding: 1rem;
+/* ---------- Pied de page ---------- */
+footer { background-color: #A5A6F6; text-align: center; padding: 1rem; }
+footer p { margin: 0; }
+footer a { color: #000; }
+
+/* ---------- Animations ---------- */
+@keyframes descend { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: none; } }
+@keyframes monte { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: none; } }
+@keyframes apparait { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: none; } }
+@keyframes vol {
+    0%   { left: -3rem; transform: translateY(0) rotate(-5deg); }
+    50%  { transform: translateY(18px) rotate(5deg); }
+    100% { left: 105%; transform: translateY(0) rotate(-5deg); }
 }
 
-footer p {
-    margin: 0;
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) { .liste-services { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) {
+    .liste-services, .galerie { grid-template-columns: 1fr; }
+    #entete { flex-wrap: wrap; justify-content: center; }
+    h1 { flex-basis: 100%; order: -1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    .service, .photo { opacity: 1; transform: none; }
 }
