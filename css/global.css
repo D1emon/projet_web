@@ -1,1 +1,11 @@
-.bouton,.bouton_de_navigation{border-radius:2em}@media (min-width:768px){#boite,.mobile{display:flex}}#boite,.grille{display:grid}.grille{grid-template-columns:1fr;gap:1rem}.crumb,.crumb a::after{display:inline-block}@media (min-width:768px){.grille{grid-template-columns:repeat(2,1fr)}}@media (min-width:1024px){.grille{grid-template-columns:repeat(3,1fr)}}h1{padding-left:13em}nav{border-bottom:1px solid #000}.crumbs ol{list-style-type:none;padding-left:0}.crumb a::after{color:#000;content:">";font-size:80%;font-weight:700;padding:0 3px}.bouton{cursor:pointer;pointer-events:visible}a:hover{background-color:grey}.bouton_contact{padding-left:12em}body{background-image:url("../media/fondpc.png");background-size:cover}section{align-items:center}a{text-decoration:none}
+.bouton,.bouton_de_navigation{border-radius:2em}
+
+@media (min-width:768px){#boite,.mobile{display:flex}}
+#boite,.grille{display:grid}
+.grille{grid-template-columns:1fr;gap:1rem}
+.crumb,.crumb a::after{display:inline-block}
+
+@media (min-width:768px)
+{.grille{grid-template-columns:repeat(2,1fr)}}
+
+@media (min-width:1024px){.grille{grid-template-columns:repeat(3,1fr)}}h1{padding-left:13em}nav{border-bottom:1px solid #000}.crumbs ol{list-style-type:none;padding-left:0}.crumb a::after{color:#000;content:">";font-size:80%;font-weight:700;padding:0 3px}.bouton{cursor:pointer;pointer-events:visible}a:hover{background-color:grey}.bouton_contact{padding-left:12em}body{background-image:url("../media/fondpc.png");background-size:cover}section{align-items:center}a{text-decoration:none}
