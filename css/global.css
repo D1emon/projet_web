@@ -2,6 +2,7 @@
 /* Seulement sur grands écrans */
 @media (min-width: 768px) {
   #boite { display: flex; }
+  .mobile { display: flex; }
 }
 /* 1. Styles par défaut : Mobile */
 .grille {
