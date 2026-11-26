@@ -96,3 +96,9 @@ article{
     grid-template-columns: repeat(3, 1fr);
   }
 }
+aside{
+  max-width: 250px; 
+  min-width: 200px;
+  font: 0.54em sans-serif;
+  text-align: center;
+}

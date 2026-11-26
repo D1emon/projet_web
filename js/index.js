@@ -1,7 +1,7 @@
 const dialog = document.querySelector("dialog");
 const radio = document.querySelector("form").elements["close"];
 const warning = document.querySelector(".warning");
-const images = ["../media/springfield.png","../media/santiago.png"]
+const images = ["media/springfield.png","media/santiago.png"]
 
 
 let index = 0;
@@ -44,7 +44,7 @@ dialog.addEventListener("cancel", (e) => {
         window.location.href = "./pages/recomandation.html";
         }else if (event.key==="F2"){
             window.location.href= "./pages/destinations.html";       
-         }else if (event.key==="F"){
+         }else if (event.key==="3"){
             window.location.href= "./pages/Services.html";       
          }
 
