@@ -1,26 +1,24 @@
-<html>
+<!DOCTYPE html>
     <head>
-        
-        <link href="../css/activity_rubric.css" rel="stylesheet">
-        <link href="../css/global.css" rel="stylesheet">
-        <link href="../css/light.css" rel="stylesheet">
-
-        <title>activités</title>
-    
+        <title>Activity</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--donner par l ia pour pouvoir afficher le site en mobile et non bureau -->
+        <meta name="description" content="Vous voulez vous evader nous vous proposerons des choix diverses et varies dans le continent americain pour les activitées.  .">       
+        <meta charset="utf-8">
+        <link href="/css/activity_rubric.css" rel="stylesheet">
+        <link href="/css/global.css" rel="stylesheet">
+        <link href="/css/light.css" rel="stylesheet">
+        <link href="/css/index.css" rel="stylesheet">
     </head>
-
-        <body>
-             <header>
+    <header>
                     <nav class= "crumb"> 
                         <ol>
-                        <li class="crumb"><a href="../index.html">accueil</a></li><!-- ligne https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav-->
+                        <li class="crumb"><a href="#">accueil</a></li><!-- ligne https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav-->
                         </ol>
                     </nav>
                     <div id="entete">
-                        <img class ="logo" src="../media/logo2.png" alt="logo"/>                    
-                        <h1> <strong>America Travels</strong></h1>
+                        <img class ="logo" src="/media/logo2.png" alt="logo"/>                    
+                        <h1> <strong>activities</strong></h1>
                         <button class="bouton" type="button" commandfor="mydialog" command="show-modal">nous contacter</button>
-                        <button class="bouton" type="button" id="btn-theme">🌙 Mode sombre</button>
                         <a class="bouton" type="button">Nos agences</a>
                         <dialog id="mydialog"> 
                             <div class="wrapper">
@@ -45,22 +43,94 @@
                     </div>       
 
 
-                </header>       
-            <div class="header">
-                <p><center>America travel</center></p>
-            <div>
-            <div class="search_conteneur">
-                <input type="search" class="search_bar"/>
-                <button><img src="../media/loupe.png" height="30" width="30"></button>
+                </header> 
+    <body>
+        <div class="USA_header">
+            <div class="subclass_1">
+            <select name="Etat" class="Etat">
+                <option value="Selection_Pays" >pays</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexique">Mexique</option>
+                <option value="Brésil">Brésil</option>
+            </select>
+            <select name="ville" class="Etat">
+                <option value="selection" >type d'activité</option>
+                <option value="nature" >nature</option>
+                <option value="sport" >sport</option>
+                <option value="road-trip" >road-trip</option>
+                <option value="sport" >sport</option>
+                <option value="monument" >monument</option>
+            </select>
             </div>
-            <center><div class="recommandation">recommandation</div></center>
-            <div class="all_activity">
-               
-                <button class="activity1"><center>  activite1 </center></button> 
-                <button class="activity2"><center>  activite2 </center></button>
-                <button class="activity2"><center>  activite3 </center></button>
-                <button class="activity2"><center>  activite4 </center></button>
+            <div class="conteneur_button_search"><button class="button_search"><img class="search_icon1" src="/media/loupe.png" height="40em" width="40em"></button></div>
+            <button class="comeback"><a href="/index.html">Retour</a></button>
+        </div>
+            
+        </div>
+        <div class="all_activities">
+            <button class="activities">
+                <a href="https://www.statueofliberty.org/statue-of-liberty/"> statut de la liberté</a>
+                <div>
+                    <img src="/media/statue.jpg">
+                </div>
+        
+        
+            </button>
+            <button class="activities">
+                <a href="https://www.office-tourisme-usa.com/etat/arizona/grand-canyon-national-park/"> Le Grand Canyon</a>
+                <div>
+                    <img src="/media/Grand_Canyon__Arizona__USA.webp">
+                </div>
+        
+        
+            </button>
+            <button class="activities">
+                <a href="https://montreal.ca/lieux/parc-du-mont-royal"> Le Mont Royal</a>
+                <div>
+                    <img src="/media/mont-royal-ete.jpg">
+                </div>
+        
+        
+            </button>
+            
+            <button class="activities">
+                <a href="https://espacepourlavie.ca/biodome"> Le Biodôme</a>
+                <div>
+                    <img src="/media/2c89a0cbd940e511dc2441c1d3790637bd70873876268258798bd0f810fde117.avif">
+                </div>
+        
+        
+            </button>
+         
+        
+            <button class="activities">
+                <a href="https://secretoo.com/excursion/mexique-plongee-puerto-morelos"> plongée dans la mer des Caraïbe</a>
+                <div>
+                    <img src="/media/cabo-san-lucas-e1593591860283.jpg">
+                </div>
+        
+        
+            </button>
+            
+            <button class="activities">
+                <a href="https://www.paineirascorcovado.com.br/cristo-redentor/?lang=es"> Le Christ Redempteur</a>
+                <div>
+                    <img src="/media/christ_redempteur_rio.jpg">
+                </div>
+        
+        
+            </button>
+            
+            <div class="dark">
+                <script src="../js/theme.js" defer></script>
             </div>
-            <script src="../js/theme.js" defer></script>
-        </body>
+             <footer>
+                <article>
+                    <img src="/media/amuiut.jpg"/>
+                    <a href ="https://iut.univ-amu.fr/fr/formations/bachelor-universitaire-de-technologie/but-informatique/but-info-aix">413 Av. Gaston Berger, 13100 Aix-en-Provence *cette pub ne peux etre retirer par un adblock désolé pour cette agréable profit pour nous</a>
+                </article>
+
+            </footer>
+    </body>
 </html>
