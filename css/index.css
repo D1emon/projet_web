@@ -19,11 +19,9 @@
   }
 }
 a {
+    border:0em;
     text-decoration: none;
-}
-a{
     align-items: center;
-    
 }
 
 .a:active {
