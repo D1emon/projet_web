@@ -21,7 +21,5 @@ document.addEventListener("keydown", (event) => {
     if (event.target.closest("input, textarea")) return;
     if (event.key === "Backspace") {
         window.location.href = "../index.html";
-    } else if (event.key === "F2") {
-        window.location.href = "destinations.html";
-    }
+    } 
 });
