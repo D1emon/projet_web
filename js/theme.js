@@ -1,5 +1,5 @@
 // 1) on enlève tout ancien lien vers dark.css qui serait resté dans la page
-document.querySelectorAll('link[href*="dark.css"]').forEach((l) => l.remove());
+document.querySelectorAll('link[href*="../css/dark.css"]').forEach((l) => l.remove());
 
 // 2) le lien du thème sombre est créé ici, uniquement quand on en a besoin
 const sombre = document.createElement("link");
