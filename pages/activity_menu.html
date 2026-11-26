@@ -6,29 +6,60 @@
         <link href="../css/light.css" rel="stylesheet">
 
         <title>activités</title>
-        
-
-
-
-
+    
     </head>
-    <body>
-        <div class="header"><p><center>America travel</center></p><div>
-        <div class="search_conteneur"><input 
-        type="search"
-        class="search_bar"
-        
-        />
-        <button><img src="/media/loupe.png" height="30" width="30"></button>
-        </div>
-        <center><div class="recommandation">recommandation</div></center>
-        <div class="all_activity">
-        <button class="bouton" type="button" id="btn-theme">🌙 Mode sombre</button>
-        <button class="activity1"><center>  activity1 </center></button> 
-        <button class="activity2"><center>  activity2 </center></button>
-        <button class="activity2"><center>  activity2 </center></button>
-        <button class="activity2"><center>  activity2 </center></button>
-        </div>
-        <script src="../js/theme.js" defer></script>
-    </body>
+
+        <body>
+             <header>
+                    <nav class= "crumb"> 
+                        <ol>
+                        <li class="crumb"><a href="#">accueil</a></li><!-- ligne https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav-->
+                        </ol>
+                    </nav>
+                    <div id="entete">
+                        <img class ="logo" src="media/logo2.png" alt="logo"/>                    
+                        <h1> <strong>America Travels</strong></h1>
+                        <button class="bouton" type="button" commandfor="mydialog" command="show-modal">nous contacter</button>
+                        <a class="bouton" type="button">Nos agences</a>
+                        <dialog id="mydialog"> 
+                            <div class="wrapper">
+                                <form >
+                                    <p>
+                                    <label for="prenom">Prénom</label>
+                                     <input id="prenom" type="text" name="prenom" value=" ">
+                                     <label for="nom">Nom</label>
+                                     <input id="nom" type="text" name="nom" value=" ">
+                                     <label for="email">email</label>
+                                     <input id ="email" type="email" name ="email" value>
+                                     <br>
+                                     <textarea name="impression" rows="2" cols="50">Donnez vos impressions sur le site...</textarea><br>
+                                     <input type="submit" value="envoyez">
+                                    </p>
+                                </form>
+                            </div>
+                            <button commandfor="mydialog" command="request-close">fermez</button>
+                            
+                        </dialog>   
+                                
+                    </div>       
+
+
+                </header>       
+            <div class="header">
+                <p><center>America travel</center></p>
+            <div>
+            <div class="search_conteneur">
+                <input type="search" class="search_bar"/>
+                <button><img src="../media/loupe.png" height="30" width="30"></button>
+            </div>
+            <center><div class="recommandation">recommandation</div></center>
+            <div class="all_activity">
+                <button class="bouton" type="button" id="btn-theme">🌙 Mode sombre</button>
+                <button class="activity1"><center>  activite1 </center></button> 
+                <button class="activity2"><center>  activite2 </center></button>
+                <button class="activity2"><center>  activite3 </center></button>
+                <button class="activity2"><center>  activite4 </center></button>
+            </div>
+            <script src="../js/theme.js" defer></script>
+        </body>
 </html>
