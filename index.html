@@ -14,29 +14,31 @@
             <header>
                     <nav class= "crumb"> 
                         <ol>
-                        <li class="crumb"><a href="#">accueil</a></li><!-- ligne https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav-->
+                        <li class="crumb"><a href="index.html">accueil</a></li><!-- ligne https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/nav-->
                         </ol>
                     </nav>
                     <div id="entete">
-                        <img class ="logo" src="media/logo2.png" alt="logo"/>                    
+                        <img class ="logo"  src="media/logo2.png" alt="logo"/>                    
                         <h1> <strong>America Travels</strong></h1>
                         <button class="bouton" type="button" commandfor="mydialog" command="show-modal">nous contacter</button>
                         <button class="bouton" type="button" id="btn-theme">🌙 Mode sombre</button>
-                        <a class="bouton" type="button">Nos agences</a>
+                        <a class="bouton" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" >Nos agences</a>
                         <dialog id="mydialog"> 
                             <div class="wrapper">
-                                <form >
+                                <form  action="mailto:ethan.ferrali@etu.univ-amu.fr" method="post" enctype="text/plain">
                                     <p>
                                     <label for="prenom">Prénom</label>
-                                     <input id="prenom" type="text" name="prenom" value=" ">
-                                     <label for="nom">Nom</label>
-                                     <input id="nom" type="text" name="nom" value=" ">
-                                     <label for="email">email</label>
-                                     <input id ="email" type="email" name ="email" value>
-                                     <br>
-                                     <textarea name="impression" rows="2" cols="50">Donnez vos impressions sur le site...</textarea><br>
-                                     <input type="submit" value="envoyez">
+                                    <input id="prenom" type="text" name="Prénom" placeholder="Votre prénom" required>
+                                    <label for="nom">Nom</label>
+                                    <input id="nom" type="text" name="Nom" placeholder="Votre nom" required>
+                                    <label for="email">email</label>
+                                    <input id="email" type="email" name="Email" placeholder="nom@exemple.fr" required>
+                                    <br>
+                                    <textarea name="impression" rows="2" cols="50">Donnez vos impressions sur le site...</textarea>
+                                    <br>
                                     </p>
+                                
+                                    <input type="submit" value="envoyer">
                                 </form>
                             </div>
                             <button commandfor="mydialog" command="request-close">fermez</button>
@@ -49,13 +51,29 @@
                 </header>       
                 <section>
                    <div id="boite">
-                         <a class="bouton" href="pages/recomandation.html">recommandations</a>  
+                        <a class="bouton" href="pages/recomandation.html">recommandations</a>  
                         <a class="bouton" href="pages/destinations.html">destinations</a>
                         <a class="bouton" href="pages/Services.html">services</a>
                         <a class="bouton" href="pages/activity.html">activitées</a>
                 
                         
                     </div>
+                    <article>
+                        <video controls>
+                            <source src="media/videovoyage.mp4" type="video/mp4" />
+                                <track default
+                                kind="subtitles"
+                                srclang="fr"
+                                src="media/soustitre.vtt" 
+                                label="francais"/> <!--https://developer.mozilla.org/fr/docs/Web/HTML/Reference/Elements/video et https://developer.mozilla.org/fr/docs/Web/API/WebVTT_API-->
+                                
+
+                            <p>
+                                Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
+                                <a href="myVideo.mp4">un lien pour télécharger la vidéo</a>.
+                            </p>
+                        </video>
+                    </article>
                     <article>
                         <header>
                             <h2>à la Une</h2>
@@ -74,7 +92,7 @@
                 </section>
             <footer>
                 <article>
-                    <img src="media/amuiut.jpg"/>
+                    <img src="media/amuiut.jpg" alt="amulogo" />
                     <a href ="https://iut.univ-amu.fr/fr/formations/bachelor-universitaire-de-technologie/but-informatique/but-info-aix">413 Av. Gaston Berger, 13100 Aix-en-Provence</a>
                 </article>
 

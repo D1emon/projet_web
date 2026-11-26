@@ -30,7 +30,7 @@ a {
     display:flex;
     justify-content: space-between;
     justify-content: space-around;
-    size: 2em;
+    resize: 2em;
 }
 #boite{
     display:flex;
@@ -66,4 +66,9 @@ img:hover{
 #boite a:hover{
   cursor: pointer;
   transform:scale(1.5) ; 
+}
+video{
+  width: 30em;
+  height: 30em;
+  align-items: center;
 }
